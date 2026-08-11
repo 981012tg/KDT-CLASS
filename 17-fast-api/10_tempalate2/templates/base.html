@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>경북대학교 17기 KDT</title>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans: "Noto Sans KR", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="w-full h-20 bg-blue-100 flex justify-center">
+      <div class="w-[900px] h-full flex justify-between items-center">
+        <a href="/"> <div>로고</div> </a>
+        <div class="flex gap-10 font-bold text-purple-700 text-xl">
+          <a href="/introduction">
+            <div class="hover:shadow hover:text-red-500 hover:-translate-y-1 hover:translate-x-1 duration-200">회사소개</div>
+          </a>
+          <div>커리큘럼</div>
+          <div>블로그</div>
+          <div>커뮤니티</div>
+          <div>컨택어스</div>
+          <a href="/signup">
+            <div class="hover:shadow hover:text-red-500 hover:-translate-y-1 hover:translate-x-1 duration-200">회원가입</div>
+          </a>
+        </div>
+      </div>
+    </header>
+    {% block content %} {% endblock%}
+  </body>
+</html>

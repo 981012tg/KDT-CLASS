@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block contents %}
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
+    <div class="max-w-2xl mx-auto">
+        <!-- Header -->
+        <div class="mb-8">
+            <h1 class="text-4xl font-bold text-gray-800">새 메모 작성</h1>
+            <p class="text-gray-600 mt-2">새로운 메모를 작성해보세요</p>
+        </div>
+
+        <!-- Write Form -->
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <form id="memoForm" class="space-y-6">
+                <!-- Title Input -->
+                <div>
+                    <label for="title" class="block text-sm font-medium text-gray-700 mb-2">
+                        제목
+                    </label>
+                    <input
+                        type="text"
+                        id="title"
+                        name="title"
+                        placeholder="메모 제목을 입력하세요"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition text-gray-800"
+                        required
+                    />
+                </div>
+
+                <!-- Content Textarea -->
+                <div>
+                    <label for="content" class="block text-sm font-medium text-gray-700 mb-2">
+                        내용
+                    </label>
+                    <textarea
+                        id="content"
+                        name="content"
+                        placeholder="메모 내용을 입력하세요"
+                        rows="12"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition text-gray-800 resize-none"
+                        required
+                    ></textarea>
+                </div>
+
+                <!-- Button Group -->
+                <div class="flex gap-4 justify-end pt-4">
+                    <button
+                        type="button"
+                        onclick="window.history.back()"
+                        class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-6 rounded-lg transition duration-200"
+                    >
+                        취소
+                    </button>
+                    <button
+                        type="submit"
+                        class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-200"
+                    >
+                        저장
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('memoForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const title = document.getElementById('title').value;
+        const content = document.getElementById('content').value;
+        
+        try {
+            const response = await fetch('/memos', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    title: title,
+                    content: content
+                })
+            });
+            
+            if (response.ok) {
+                alert('메모가 저장되었습니다!');
+                window.location.href = '/memos';
+            } else {
+                alert('메모 저장에 실패했습니다.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('오류가 발생했습니다.');
+        }
+    });
+</script>
+{% endblock %}

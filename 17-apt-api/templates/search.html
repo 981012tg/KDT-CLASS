@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>검색결과 | 아파트 실거래 정보</title>
+  </head>
+  <body>
+    <div class="w-full h-40">
+      <div class="w-5xl h-full mx-auto">
+        <h1
+          class="text-3xl h-full text-[#293681] font-bold flex justify-center items-center"
+        >
+          17기 아파트 실거래 정보 데이터 검색 결과
+        </h1>
+        <table class="w-full">
+          <thead>
+            <tr>
+              <th class="w-40 h-20">아파트이름</th>
+              <th class="w-40">실거래정보</th>
+              <th class="w-40">지역</th>
+              <th class="w-40">거래일</th>
+              <th class="w-40">평수</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for result in results %}
+            <tr>
+              <td class="h-20">{{ result["aptNm"] }}</td>
+              <td class="h-20">{{ result["dealAmount"] }}</td>
+              <td class="h-20">{{ result["estateAgentSggNm"] }}</td>
+              <td class="h-20">
+                {{ result["dealYear"] + "-" + result["dealMonth"] + "-" +
+                result["dealDay"] }}
+              </td>
+              <td class="h-20">{{ result["excluUseAr"] }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

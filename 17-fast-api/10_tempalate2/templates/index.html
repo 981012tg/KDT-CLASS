@@ -1,0 +1,40 @@
+<!-- <html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+        <title>경북대학교 17기 KDT</title>
+        <style type="text/tailwindcss">
+            @theme{
+                --font-sans : "Noto Sans KR", sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="font-bold text-[#063B00] text-2xl">안녕 FastAPI</h1>
+        <p class="">파이썬 머신러닝 판다스 데이터 분석</p>
+    </body>
+</html> -->
+
+
+{% extends "base.html" %}
+<!--  -->
+{% block content %}
+<div class="w-full flex justify-center">
+    <div class="w-[900px]"> 
+        <h1 class="font-bold text-[#063B00] text-2xl border py-4 px-4 mt-16">안녕 Fast API</h1>
+        <p class="">
+            소유진·백종원→문세윤까지…시한부 엄마 잃은 배그부부 두 아들 위해 직접 나섰다
+        </p>
+        <div class="w-full h-80 bg-red-500 overflow-hidden">
+        <img
+            class="w-full h-full object-center"
+            src="https://images.unsplash.com/photo-1760389005000-bf02bf24f463?q=80&w=1423&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        />
+        </div>
+    </div>
+   
+</div>
+
+{% endblock %}

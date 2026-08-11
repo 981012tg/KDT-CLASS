@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block contents %}
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
+    <div class="max-w-4xl mx-auto">
+        <!-- Header Section -->
+        <div class="flex items-center justify-between mb-8">
+            <div>
+                <h1 class="text-4xl font-bold text-gray-800">나의 메모</h1>
+                <p class="text-gray-600 mt-2">작성된 메모를 확인하고 관리해보세요</p>
+            </div>
+            <a href="/write" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-200 inline-block">
+                + 새 메모 작성
+            </a>
+        </div>
+
+        <!-- Memos List -->
+        <div class="space-y-4">
+            <!-- Memo Card 1 -->
+            <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6 border-l-4 border-blue-500">
+                <div class="flex items-start justify-between">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">첫 번째 메모</h3>
+                        <p class="text-gray-600 mb-3">
+                            이것은 메모 내용입니다. 여기에 작업 내용이나 중요한 정보를 기록할 수 있습니다.
+                            메모는 자동으로 저장되며, 언제든 수정할 수 있습니다.
+                        </p>
+                        <p class="text-sm text-gray-400">2024년 7월 27일 오후 3:30</p>
+                    </div>
+                    <div class="flex gap-2 ml-4">
+                        <button class="text-blue-600 hover:text-blue-700 font-medium text-sm px-3 py-1 rounded hover:bg-blue-50 transition">
+                            수정
+                        </button>
+                        <button class="text-red-600 hover:text-red-700 font-medium text-sm px-3 py-1 rounded hover:bg-red-50 transition">
+                            삭제
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Memo Card 2 -->
+            <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6 border-l-4 border-green-500">
+                <div class="flex items-start justify-between">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">두 번째 메모</h3>
+                        <p class="text-gray-600 mb-3">
+                            프로젝트 진행 상황을 정리해야 합니다. 다음 주까지 완료해야 할 과제들을 리스트업하고,
+                            각 항목별로 담당자를 배정하는 것이 중요합니다.
+                        </p>
+                        <p class="text-sm text-gray-400">2024년 7월 26일 오후 2:15</p>
+                    </div>
+                    <div class="flex gap-2 ml-4">
+                        <button class="text-blue-600 hover:text-blue-700 font-medium text-sm px-3 py-1 rounded hover:bg-blue-50 transition">
+                            수정
+                        </button>
+                        <button class="text-red-600 hover:text-red-700 font-medium text-sm px-3 py-1 rounded hover:bg-red-50 transition">
+                            삭제
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Memo Card 3 -->
+            <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6 border-l-4 border-purple-500">
+                <div class="flex items-start justify-between">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">세 번째 메모</h3>
+                        <p class="text-gray-600 mb-3">
+                            오늘의 회의 내용을 정리했습니다. 주요 논의사항은 다음과 같습니다:
+                            1. 분기별 목표 설정 2. 팀 구성 변경 3. 새로운 프로젝트 개시
+                        </p>
+                        <p class="text-sm text-gray-400">2024년 7월 25일 오전 10:45</p>
+                    </div>
+                    <div class="flex gap-2 ml-4">
+                        <button class="text-blue-600 hover:text-blue-700 font-medium text-sm px-3 py-1 rounded hover:bg-blue-50 transition">
+                            수정
+                        </button>
+                        <button class="text-red-600 hover:text-red-700 font-medium text-sm px-3 py-1 rounded hover:bg-red-50 transition">
+                            삭제
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Memo Card 4 -->
+            <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6 border-l-4 border-yellow-500">
+                <div class="flex items-start justify-between">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">네 번째 메모</h3>
+                        <p class="text-gray-600 mb-3">
+                            개발 환경 설정을 완료했습니다. 다음 단계는 데이터베이스 구성과 API 문서화입니다.
+                            모든 팀원이 같은 버전을 사용하도록 주의하세요.
+                        </p>
+                        <p class="text-sm text-gray-400">2024년 7월 24일 오후 5:20</p>
+                    </div>
+                    <div class="flex gap-2 ml-4">
+                        <button class="text-blue-600 hover:text-blue-700 font-medium text-sm px-3 py-1 rounded hover:bg-blue-50 transition">
+                            수정
+                        </button>
+                        <button class="text-red-600 hover:text-red-700 font-medium text-sm px-3 py-1 rounded hover:bg-red-50 transition">
+                            삭제
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Empty State (Optional) -->
+        <!-- 
+        <div class="text-center py-12">
+            <p class="text-gray-500 text-lg">작성된 메모가 없습니다</p>
+            <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-200">
+                첫 메모 작성하기
+            </button>
+        </div>
+        -->
+    </div>
+</div>
+{% endblock %}

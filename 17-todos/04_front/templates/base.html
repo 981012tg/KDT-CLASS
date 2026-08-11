@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <title>To-Do List</title>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="bg-white shadow-md">
+            <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold text-blue-600">
+                        📝 메모장
+                    </a>
+                </div>
+
+                <!-- Menu -->
+                <div class="flex items-center gap-4">
+                    <a href="/write" class="text-gray-700 hover:text-blue-600 font-medium transition">
+                        글쓰기
+                    </a>
+                    <a href="/memos" class="text-gray-700 hover:text-blue-600 font-medium transition">
+                        메모
+                    </a>
+                    <a href="/signup" class="text-gray-700 hover:text-blue-600 font-medium transition">
+                        회원가입
+                    </a>
+                    <a href="/login" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">
+                        로그인
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Contents -->
+        {% block contents %}
+        {% endblock %}
+    </body>
+</html>
