@@ -20,3 +20,6 @@ __pycache__/
 # Windows
 desktop.ini
 *.lnk
+
+# 수업자료
+materials/
