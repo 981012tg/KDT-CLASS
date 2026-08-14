@@ -22,4 +22,4 @@ desktop.ini
 *.lnk
 
 # 수업자료
-materials/
+materials/07_Machine_Learning/data/creditcard.csv
