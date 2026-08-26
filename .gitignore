@@ -1,6 +1,8 @@
 # Python 가상환경
 venv/
 .venv/
+/08_이미지처리바이블/.venv
+
 
 # Python 캐시
 __pycache__/
@@ -29,3 +31,11 @@ desktop.ini
 
 # 수업자료
 /09_/drive-download-20260825T012038Z-1-002
+
+# 이미지처리바이블
+/08_이미지처리바이블/drive-download-20260825T012038Z-1-002
+/08_이미지처리바이블/python-3.10.11-amd64.exe
+/08_이미지처리바이블/python-install.log
+/08_이미지처리바이블/data
+
+
