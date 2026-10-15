@@ -6,6 +6,7 @@ tensorflow==2.15.0
 pillow==9.4.0
 opencv-python==4.8.0.76
 tensorflow-hub==0.16.1
+tfswin==3.4.0
 
 # TF 2.15와 호환되는 버전으로 고정 (최신 버전 설치 시 충돌 발생)
 tensorflow-probability==0.23.0

@@ -32,11 +32,9 @@ desktop.ini
 # 수업자료
 /09_/drive-download-20260825T012038Z-1-002
 
-# 이미지처리바이블
-/08_이미지처리바이블/drive-download-20260825T012038Z-1-002
-/08_이미지처리바이블/python-3.10.11-amd64.exe
-/08_이미지처리바이블/python-install.log
-/08_이미지처리바이블/data
-/08_이미지처리바이블/best_cifar10_cnn_model.h5
+# 이미지처리바이블: 최상위 노트북과 의존성 파일만 추적
+/08_image_bible/*
+!/08_image_bible/*.ipynb
+!/08_image_bible/requirements.txt
 
 
