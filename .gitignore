@@ -70,4 +70,16 @@ desktop.ini
 !/12_VT/swin/
 /12_vision_transformer/
 
+# RAG: 코드, 의존성 파일, 최소 지식 문서만 추적
+/13_rag/*
+!/13_rag/TotalAI.ipynb
+!/13_rag/moa_server.py
+!/13_rag/requirements.txt
+!/13_rag/data/
+/13_rag/data/*
+!/13_rag/data/knowledge/
+!/13_rag/data/knowledge/*.txt
+/13_rag/**/.DS_Store
+/13_rag/**/__MACOSX/
+
 
