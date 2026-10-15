@@ -1,0 +1,46 @@
+# Windows 10/11 x64, Python 3.12
+# Keep NumPy 1.x for TensorFlow 2.16 and legacy Gym compatibility.
+numpy==1.26.4
+
+# PyTorch CUDA 13.0 for NVIDIA Blackwell (RTX 50 series).
+# The CUDA runtime is bundled in these wheels; a compatible NVIDIA driver is required.
+--extra-index-url https://download.pytorch.org/whl/cu130
+torch==2.13.0+cu130
+torchvision==0.28.0+cu130
+torchaudio==2.11.0+cu130
+torchsummary
+
+# Data and visualization
+matplotlib
+seaborn
+pandas
+scikit-learn
+scikit-optimize
+yfinance
+
+# Image and audio processing
+pillow
+opencv-python
+librosa
+soundfile
+
+# Pretrained models
+transformers
+timm
+
+# Deployment and optimization
+# ONNX 1.17 avoids the ml_dtypes conflict with TensorFlow 2.16.2.
+onnx==1.17.0
+onnxruntime
+
+# Legacy Gym API used by the notebooks
+gym==0.25.2
+pygame
+
+# Native Windows TensorFlow is CPU-only for releases after 2.10.
+tensorflow==2.16.2
+
+# Notebook environment
+jupyterlab
+ipykernel
+ipywidgets

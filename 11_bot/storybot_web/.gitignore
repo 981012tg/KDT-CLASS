@@ -1,0 +1,8 @@
+__pycache__/
+.packages/
+.tools/
+*.sqlite3
+*.sqlite3-*
+*.log
+frontend/node_modules/
+frontend/dist/

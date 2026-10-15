@@ -37,4 +37,37 @@ desktop.ini
 !/08_image_bible/*.ipynb
 !/08_image_bible/requirements.txt
 
+# PyTorch: 최상위 노트북과 의존성 파일만 추적
+/09_PyTorch/*
+!/09_PyTorch/*.ipynb
+!/09_PyTorch/requirements*.txt
+
+# LLM/CV: 노트북, 의존성 파일, 프로젝트 호환 코드만 추적
+/10_LLM_CV/*
+!/10_LLM_CV/*.ipynb
+!/10_LLM_CV/requirement.txt
+!/10_LLM_CV/requirements-torchtext.txt
+!/10_LLM_CV/torchtext/
+
+# Bot: 코드와 문서만 추적하고 학습 데이터와 모델 산출물은 제외
+/11_bot/**/*.pt
+/11_bot/**/*.bin
+/11_bot/**/merge_rules.pkl
+/11_bot/codebot/tiny_codes*
+/11_bot/storybot/tiny_stories*
+/11_bot/webbot/owt_*.txt
+/11_bot/**/*.sqlite3
+/11_bot/*.png
+/11_bot/**/.packages/
+/11_bot/**/.tools/
+/11_bot/**/node_modules/
+/11_bot/**/dist/
+
+# Vision Transformer: 완성된 12_VT의 노트북과 의존성 파일만 추적
+/12_VT/*
+!/12_VT/*.ipynb
+!/12_VT/requirements.txt
+!/12_VT/swin/
+/12_vision_transformer/
+
 

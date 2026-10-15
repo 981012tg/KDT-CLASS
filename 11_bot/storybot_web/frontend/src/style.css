@@ -1,0 +1,30 @@
+:root { font-family: system-ui, sans-serif; color: #243329; background: #f5f6f2; line-height: 1.7; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { max-width: 960px; margin: 36px auto; padding: 0 24px 48px; }
+header { margin-bottom: 28px; }
+h1 { margin: 0; font-size: 32px; }
+header p { margin-top: 4px; color: #536354; }
+nav, .actions, .pagination { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+section { background: white; padding: 28px; border: 1px solid #d7ddd5; border-radius: 10px; }
+h2 { margin-top: 0; font-size: 23px; overflow-wrap: anywhere; }
+h3 { margin: 10px 0; font-size: 17px; }
+article { padding: 18px 0; border-bottom: 1px solid #e0e5dd; }
+fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+label { display: block; font-weight: 600; margin: 16px 0 8px; }
+input, textarea { display: block; width: 100%; margin-top: 7px; border: 1px solid #889787; border-radius: 6px; padding: 11px; font: inherit; color: inherit; background: white; }
+textarea { min-height: 140px; resize: vertical; }
+.body-input { min-height: 280px; }
+button { padding: 8px 15px; border: 1px solid #81937e; border-radius: 6px; background: white; color: #29462b; font: inherit; cursor: pointer; }
+button:disabled { opacity: 0.55; cursor: default; }
+button.primary { background: #355e38; border-color: #355e38; color: white; margin-top: 12px; }
+button.link { padding: 0; border: 0; text-align: left; font-weight: 600; font-size: 19px; overflow-wrap: anywhere; }
+button[aria-pressed="true"] { background: #e1eedc; }
+button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid #809d6d; outline-offset: 3px; }
+.hint { color: #596658; font-size: 14px; }
+.story { white-space: pre-wrap; overflow-wrap: anywhere; }
+.error { color: #a02323; background: #fff0ed; padding: 12px; border-radius: 6px; }
+.notice { color: #254c28; background: #e7f0e2; padding: 12px; border-radius: 6px; }
+.pagination { justify-content: center; margin-top: 24px; }
+.generated { margin-top: 32px; padding-top: 24px; border-top: 1px solid #d7ddd5; }
+@media (max-width: 600px) { main { padding: 0 14px 32px; margin-top: 22px; } section { padding: 18px; } }
